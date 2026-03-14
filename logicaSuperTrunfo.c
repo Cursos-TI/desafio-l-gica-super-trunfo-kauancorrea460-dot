@@ -37,13 +37,13 @@ int main() {
     // Cadastro das Cartas:
 
     printf("Digite o estado da carta 1:\n");
-    scanf("%s", &estado1);
+    scanf("%s", estado1);
 
     printf("Digite o código da cidade 1:\n");
-    scanf("%s", &codigo1);
+    scanf("%s", codigo1);
 
     printf("Digite o nome da cidade 1:\n");
-    scanf("%s", &cidade1);
+    scanf("%s", cidade1);
 
     printf("Digite a população 1:\n");
     scanf("%d", &populacao1);
@@ -64,13 +64,13 @@ int main() {
 
 
     printf("Digite o estado da carta 2:\n");
-    scanf("%s", &estado2);
+    scanf("%s", estado2);
 
     printf("Digite o código da cidade 2:\n");
-    scanf("%s", &codigo2);
+    scanf("%s", codigo2);
 
     printf("Digite o nome da cidade 2:\n");
-    scanf("%s", &cidade2);
+    scanf("%s", cidade2);
 
     printf("Digite a população 2:\n");
     scanf("%d", &populacao2);
@@ -83,17 +83,29 @@ int main() {
 
     printf("Digite os pontos turísticos da cidade 2:\n");
     scanf("%d", &pontos2);
-
-
+ 
     // cálculo de densidade e PIB per capita
 
-        densidade1 = populacao1 / area1;
+        densidade1 = populacao1 / area1; 
         densidade2 = populacao2 / area2;
-
+        
         pibPerCapita1 = pib1 / populacao1;
         pibPerCapita2 = pib2 / populacao2;
 
     // Comparação de Cartas:
+
+        printf("Comparação de cartas (Atributo: População)\n");
+
+        printf("Carta 1 - %s: %d\n", cidade1, populacao1);
+        printf("Carta 2 - %s: %d\n", cidade2, populacao2);
+
+        if (populacao1 > populacao2) {
+        printf("Carta 1 venceu!\n");
+        }
+        else {
+        printf("Carta 2 venceu!\n");
+        }
+
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
